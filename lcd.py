@@ -1,3 +1,4 @@
+
 #!/usr/bin/python
 #
 # HD44780 LCD Test Script for
@@ -32,13 +33,13 @@ import RPi.GPIO as GPIO
 import time
 
 # Define GPIO to LCD mapping
-LCD_RS = 26
-LCD_E  = 19
-LCD_D4 = 13 
-LCD_D5 = 6
-LCD_D6 = 5
-LCD_D7 = 11
-LED_ON = 15
+LCD_RS = 38
+LCD_E  = 40 
+LCD_D4 = 31  
+LCD_D5 = 33
+LCD_D6 = 35
+LCD_D7 = 37
+LED_ON = 36
 
 # Define some device constants
 LCD_WIDTH = 16    # Maximum characters per line
@@ -65,7 +66,6 @@ def main():
   time.sleep(1)
   GPIO.output(LED_ON, True)
   time.sleep(1)
-
   # Send some centred test
   lcd_byte(LCD_LINE_1, LCD_CMD)
   lcd_string("Rasbperry Pi",2)
